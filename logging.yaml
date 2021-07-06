@@ -11,12 +11,15 @@ handlers:
     formatter: verbose
     stream: ext://sys.stdout
   tofile:
-    class: logging.FileHandler
-    level: DEBUG
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
     formatter: verbose
     filename: app.log
+    maxBytes: 10485760
+    backupCount: 5
+    encoding: utf8
 
 # Default handler if not logger provided
 root:
     level: INFO
-    handlers: [console]
+    handlers: [console, tofile]
