@@ -1,0 +1,6 @@
+aiogram==2.14.1
+pytest==6.2.4
+pytest-mock==3.6.1
+pyyaml==5.4.1
+requests==2.25.1
+requests-html==0.10.0
