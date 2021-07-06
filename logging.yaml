@@ -10,6 +10,11 @@ handlers:
     level: INFO
     formatter: verbose
     stream: ext://sys.stdout
+  tofile:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: verbose
+    filename: app.log
 
 # Default handler if not logger provided
 root:
